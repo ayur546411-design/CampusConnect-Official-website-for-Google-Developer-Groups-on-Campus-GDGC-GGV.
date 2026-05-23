@@ -81,7 +81,7 @@ export default function Gallery() {
           {/* --- EXTRA COLLAPSIBLE GALLERY ROWS (ROW 2) --- */}
           {/* Smooth drop-down transition block */}
           <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 w-full px-6 sm:px-4 transition-all duration-500 ease-in-out overflow-hidden ${
-            isExpanded ? 'mt-6 max-h-[1000px] opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95 pointer-events-none'
+            isExpanded ? 'mt-6 max-h-96 opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95 pointer-events-none'
           }`}>
             {extraPhotos.map((imgSrc, index) => (
               <div key={index} className="w-full h-56 sm:h-64 rounded-3xl overflow-hidden border-4 border-white shadow-sm bg-gray-100">
