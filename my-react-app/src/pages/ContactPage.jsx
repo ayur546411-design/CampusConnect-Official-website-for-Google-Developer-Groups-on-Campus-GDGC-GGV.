@@ -5,12 +5,15 @@ import ContactFAQs from '../components/ContactFAQs';
 
 export default function ContactPage() {
   return (
-    <section className="w-full bg-[#f8fafd] py-12 md:py-20 font-sans tracking-wide">
+    // Changed py-12 md:py-20 to pt-2 pb-12 md:pt-4 md:pb-20 to eliminate top margins
+    <section className="w-full bg-[#f8fafd] pt-2 pb-12 md:pt-4 md:pb-20 font-sans tracking-wide">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         
         <ContactFormBlock />
-        <ContactMap />
-        <ContactFAQs />   
+       
+        <ContactFAQs />
+         <ContactMap />
+        
       </div>
     </section>
   );
