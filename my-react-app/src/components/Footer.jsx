@@ -5,10 +5,8 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#030a10] text-[#a0aab4] py-14 px-4 font-sans tracking-wide">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 px-4 sm:px-6 lg:px-8">
-        
-        {/* --- COLUMN 1: BRANDING & SOCIAL LINKS --- */}
-        <div className="flex flex-col space-y-5">
-          {/* Using your local logo asset safely */}
+         
+        <div className="flex flex-col space-y-5"> 
           <div className="flex items-center gap-2.5">
             <img 
               src={logo} 
@@ -36,8 +34,7 @@ export default function Footer() {
             &copy; 2024 GDGC GGV. All rights reserved.
           </p>
         </div>
-
-        {/* --- COLUMN 2: QUICK LINKS --- */}
+ 
         <div className="flex flex-col space-y-4 md:pl-16">
           <h3 className="text-[18px] font-semibold text-white tracking-tight">
             Quick Links
@@ -51,8 +48,7 @@ export default function Footer() {
             <li><a href="#team" className="hover:text-white">&gt; Team</a></li>
           </ul>
         </div>
-
-        {/* --- COLUMN 3: CONNECT WITH US --- */}
+ 
         <div className="flex flex-col space-y-4">
           <h3 className="text-[18px] font-semibold text-white tracking-tight">
             Connect With Us

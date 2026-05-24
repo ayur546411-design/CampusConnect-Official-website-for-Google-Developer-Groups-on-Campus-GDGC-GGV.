@@ -1,10 +1,8 @@
 import React from 'react';
 
-// --- IMPORT TRACK ILLUSTRATION IMAGES ---
 import cloudCampaignImg from '../assets/cloud1.png'; 
 import aithonImg from '../assets/aithon.png';
 
-// --- IMPORT ALL 8 PAST SEASONS EVENT GALLERY PHOTOS ---
 import gallery1 from '../assets/past_gallery1.jpg';
 import gallery2 from '../assets/past_gallery2.jpg';
 import gallery3 from '../assets/past_gallery3.jpg';
@@ -15,7 +13,6 @@ import gallery7 from '../assets/gallary2.jpg';
 import gallery8 from '../assets/gallary1.jpg';
 
 export default function PastEvents() {
-  // Data for the horizontal split track section
   const trackEvents = [
     {
       title: "Google Cloud Campaign",
@@ -35,7 +32,6 @@ export default function PastEvents() {
     }
   ];
 
-  // Data for the 8-card UI gallery grid
   const pastSessions = [
     { date: "12 Mar 2024", type: "Tech Talk", image: gallery1 },
     { date: "28 Feb 2024", type: "Workshop", image: gallery2 },
@@ -50,7 +46,6 @@ export default function PastEvents() {
   return (
     <div className="w-full space-y-16 pt-6 font-sans tracking-wide text-left">
       
-      {/* ================= SECTION 1: CAMPAIGNS & TRACKS SPLIT GRID ================= */}
       <div className="space-y-6">
         <h3 className="text-2xl font-bold text-[#202124]">
           Past Events
@@ -62,7 +57,6 @@ export default function PastEvents() {
               key={index}
               className="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden flex flex-col sm:flex-row items-stretch min-h-[200px] group hover:shadow-md transition-shadow duration-300"
             >
-              {/* Text metadata content box */}
               <div className={`flex-1 p-6 md:p-8 flex flex-col justify-center space-y-2 border-l-8 ${item.accentColor}`}>
                 <h4 className="text-2xl font-black text-[#202124] tracking-tight">
                   {item.title}
@@ -75,7 +69,6 @@ export default function PastEvents() {
                 </p>
               </div>
 
-              {/* Integrated Vector Image Block */}
               <div className={`w-full sm:w-[35%] ${item.bgColor} p-6 flex items-center justify-center border-t sm:border-t-0 sm:border-l border-gray-50`}>
                 <img 
                   src={item.image} 
@@ -88,7 +81,6 @@ export default function PastEvents() {
         </div>
       </div>
 
-      {/* ================= SECTION 2: 8-CARD COMPREHENSIVE SEASONS GALLERY ================= */}
       <div className="space-y-6">
         <div className="space-y-2">
           <h3 className="text-2xl font-bold text-[#0f172a] tracking-tight">
@@ -97,14 +89,12 @@ export default function PastEvents() {
           <div className="w-12 h-1 bg-[#4285f4] rounded-full"></div>
         </div>
 
-        {/* Responsive layout grid grid system matching your exact UI screenshot setup */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
           {pastSessions.map((session, index) => (
             <div 
               key={index} 
               className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all duration-300"
             >
-              {/* Top Image Frame */}
               <div className="w-full h-48 bg-gray-50 overflow-hidden relative">
                 <img 
                   src={session.image} 
@@ -117,9 +107,7 @@ export default function PastEvents() {
                 />
               </div>
 
-              {/* Bottom Info Stripe Strip */}
               <div className="p-4 bg-white flex items-center justify-start space-x-2 text-sm text-[#202124] font-semibold border-t border-gray-50">
-                {/* Calendar Inline SVG Icon */}
                 <svg 
                   className="w-4 h-4 text-[#5f6368] flex-shrink-0" 
                   fill="none" 

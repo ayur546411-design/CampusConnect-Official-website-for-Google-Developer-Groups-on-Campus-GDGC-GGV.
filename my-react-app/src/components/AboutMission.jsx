@@ -55,44 +55,49 @@ export default function AboutMission() {
 
   return (
     <div className="w-full flex flex-col space-y-8 py-6 font-sans tracking-wide">
-      
       {steps.map((step, idx) => (
-        <div 
-          key={idx} 
+        <div
+          key={idx}
           className="w-full bg-white rounded-4xl border border-gray-100 shadow-sm overflow-hidden flex flex-col md:flex-row items-stretch min-h-65"
         >
-          {/* --- LEFT SIDE: INNER DECORATIVE STRIP --- */}
-          <div className={`hidden sm:flex w-24 items-center justify-center p-4 border-r border-gray-50 bg-gray-50/40 ${
-            step.isReversed ? 'md:order-3 md:border-r-0 md:border-l' : ''
-          }`}>
+          <div
+            className={`hidden sm:flex w-24 items-center justify-center p-4 border-r border-gray-50 bg-gray-50/40 ${
+              step.isReversed ? 'md:order-3 md:border-r-0 md:border-l' : ''
+            }`}
+          >
             <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border ${step.badgeColor} ${step.borderColor}`}>
               {step.icon}
             </div>
           </div>
 
-          {/* --- CENTER: TEXT CONTENT BLOCK --- */}
-          <div className={`flex-1 p-8 md:p-10 flex flex-col justify-center space-y-2 ${
-            step.isReversed ? 'md:order-2' : ''
-          }`}>
+          <div
+            className={`flex-1 p-8 md:p-10 flex flex-col justify-center space-y-2 ${
+              step.isReversed ? 'md:order-2' : ''
+            }`}
+          >
             <span className={`text-3xl font-black block tracking-tight ${step.textColor}`}>
               {step.id}
             </span>
+
             <h3 className="text-2xl font-bold text-[#202124]">
               {step.title}
             </h3>
+
             <div className="w-10 h-0.5 bg-gray-300 rounded-full my-1"></div>
+
             <p className="text-[#5f6368] text-[16px] leading-relaxed font-normal">
               {step.description}
             </p>
           </div>
 
-          {/* --- RIGHT: INCREASED SIZE HIGH-INTENSITY IMAGE PANEL --- */}
-          <div className={`w-full md:w-[50%] bg-white p-6 md:p-8 flex items-center justify-center border-t md:border-t-0 border-gray-50 ${
-            step.isReversed ? 'md:order-1 md:border-r border-gray-100' : 'md:border-l border-gray-100'
-          }`}>
-            <img 
-              src={step.illustration} 
-              alt={step.title} 
+          <div
+            className={`w-full md:w-[50%] bg-white p-6 md:p-8 flex items-center justify-center border-t md:border-t-0 border-gray-50 ${
+              step.isReversed ? 'md:order-1 md:border-r border-gray-100' : 'md:border-l border-gray-100'
+            }`}
+          >
+            <img
+              src={step.illustration}
+              alt={step.title}
               className="w-full max-h-65 object-contain filter contrast-[1.25] saturate-[1.50] transition-transform duration-300 hover:scale-105"
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -100,10 +105,8 @@ export default function AboutMission() {
               }}
             />
           </div>
-
         </div>
       ))}
-
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function ContactFormBlock() {
   return (
     <div className="w-full space-y-12">
       
-      {/* ================= HERO BANNER IMAGE ================= */}
+     
       <div className="w-full h-[280px] md:h-[380px] rounded-[2.5rem] border border-gray-100 shadow-sm overflow-hidden bg-gray-50">
         <img 
           src={contactHeroImg} 
@@ -29,11 +29,8 @@ export default function ContactFormBlock() {
           }}
         />
       </div>
-
-      {/* ================= MAIN SPLIT INPUT & CARD PANEL ================= */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch pt-2">
-        
-        {/* --- LEFT SIDE: CHANNELS GRID (5 Cols) --- */}
+         
         <div className="lg:col-span-5 flex flex-col justify-between space-y-6 text-left">
           <div className="space-y-3">
             <span className="text-sm font-bold text-[#34a853] tracking-widest uppercase block">
@@ -46,8 +43,7 @@ export default function ContactFormBlock() {
               Prefer direct mail loops? Use our channels to reach out to specific operational branches on campus.
             </p>
           </div>
-
-          {/* Info Feed Channel Cards */}
+ 
           <div className="space-y-4 max-w-md w-full flex-grow flex flex-col justify-center">
             {/* Email Card */}
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center space-x-5 group hover:border-blue-100 hover:shadow-md transition-all duration-300">
@@ -59,8 +55,7 @@ export default function ContactFormBlock() {
                 <p className="text-base font-bold text-[#202124] break-all tracking-tight">gdgc.ggv@gmail.com</p>
               </div>
             </div>
-
-            {/* Location Card */}
+ 
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center space-x-5 group hover:border-green-100 hover:shadow-md transition-all duration-300">
               <div className="w-14 h-14 rounded-xl bg-green-50/60 flex items-center justify-center text-[#34a853] flex-shrink-0 font-bold text-2xl group-hover:scale-110 transition-transform">
                 📍
@@ -72,12 +67,10 @@ export default function ContactFormBlock() {
             </div>
           </div>
         </div>
-
-        {/* --- RIGHT SIDE: INPUT FORM (7 Cols) --- */}
+ 
         <div className="lg:col-span-7 w-full">
           <div className="w-full bg-white rounded-[2.5rem] border border-gray-100/90 shadow-md p-8 md:p-10 max-w-2xl mx-auto text-left relative overflow-hidden">
-            
-            {/* Colorful Accent Top Border Bar strip */}
+             
             <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#4285f4] via-[#ea4335] to-[#fbbc05]"></div>
 
             <h3 className="text-2xl font-bold text-[#202124] mb-1">Send a Message</h3>
@@ -97,8 +90,7 @@ export default function ContactFormBlock() {
                   className="w-full px-4 py-3.5 bg-gray-50/50 focus:bg-white rounded-xl border border-gray-200/80 focus:border-[#4285f4] focus:ring-4 focus:ring-blue-100/40 transition-all outline-none text-sm text-gray-800 font-medium placeholder-gray-400"
                 />
               </div>
-
-              {/* Email Box Input */}
+ 
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-[#3c4043] tracking-wide block">Email Address *</label>
                 <input 
@@ -111,8 +103,7 @@ export default function ContactFormBlock() {
                   className="w-full px-4 py-3.5 bg-gray-50/50 focus:bg-white rounded-xl border border-gray-200/80 focus:border-[#4285f4] focus:ring-4 focus:ring-blue-100/40 transition-all outline-none text-sm text-gray-800 font-medium placeholder-gray-400"
                 />
               </div>
-
-              {/* Message Box Textarea */}
+ 
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-[#3c4043] tracking-wide block">Message Context *</label>
                 <textarea 
@@ -125,8 +116,7 @@ export default function ContactFormBlock() {
                   className="w-full px-4 py-3.5 bg-gray-50/50 focus:bg-white rounded-xl border border-gray-200/80 focus:border-[#4285f4] focus:ring-4 focus:ring-blue-100/40 transition-all outline-none text-sm text-gray-800 font-medium resize-none placeholder-gray-400 min-h-[110px]"
                 ></textarea>
               </div>
-
-              {/* Submission Action Button */}
+ 
               <button 
                 type="submit" 
                 className="w-full text-center bg-[#4285f4] hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-sm hover:shadow-md transition-all active:scale-[0.98] cursor-pointer text-xs uppercase tracking-widest mt-2"

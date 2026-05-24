@@ -37,7 +37,7 @@ export default function ContactFAQs() {
   return (
     <div className="w-full space-y-8 pt-4 font-sans tracking-wide">
       
-      {/* --- TOP FAQ HEADER BADGE --- */}
+      
       <div className="flex items-center justify-center">
         <div className="bg-white border border-gray-100 shadow-sm rounded-full px-6 py-2 flex items-center space-x-3">
           <span className="flex h-2 w-2 relative">
@@ -49,11 +49,10 @@ export default function ContactFAQs() {
           </h3>
         </div>
       </div>
-
-      {/* --- CORE SECTION PANEL CONTAINER --- */}
+ 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch w-full">
         
-        {/* ================= LEFT COLUMN: SOLID FIXED CONTAINER IMAGE ================= */}
+     
         <div className="lg:col-span-5 flex w-full min-h-[340px] md:min-h-full">
           <div className="w-full bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden relative group p-0">
             <img 
@@ -67,8 +66,7 @@ export default function ContactFAQs() {
             />
           </div>
         </div>
-
-        {/* ================= RIGHT COLUMN: INTERACTIVE ACCORDIONS ================= */}
+ 
         <div className="lg:col-span-7 space-y-4 w-full flex flex-col justify-center">
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
@@ -81,18 +79,18 @@ export default function ContactFAQs() {
                     : 'border-gray-100 shadow-sm hover:border-gray-200 hover:shadow-md'
                 }`}
               >
-                {/* Accordion Toggle Trigger Button */}
+                 
                 <button
                   onClick={() => setActiveIndex(isOpen ? null : index)}
                   className="w-full p-5 flex items-center justify-between text-left group cursor-pointer outline-none select-none transition-colors"
                 >
                   <div className="flex items-center space-x-4 w-full pr-2">
-                    {/* Rounded Category Badge Container */}
+                    
                     <div className={`w-12 h-12 rounded-xl ${faq.iconBg} ${faq.iconColor} flex items-center justify-center flex-shrink-0 text-xl font-bold shadow-sm transition-transform duration-300 group-hover:scale-105`}>
                       {faq.icon}
                     </div>
                     
-                    {/* Title Details Box */}
+                     
                     <div className="flex-1">
                       <h4 className={`text-base md:text-lg font-bold tracking-tight leading-snug transition-colors duration-200 ${
                         isOpen ? faq.iconColor : faq.textColor
@@ -102,7 +100,7 @@ export default function ContactFAQs() {
                     </div>
                   </div>
 
-                  {/* Drop Indicator Chevron Pin Icon */}
+                   
                   <div className="flex-shrink-0">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                       isOpen ? 'bg-white shadow-sm rotate-180' : 'bg-gray-50 group-hover:bg-gray-100'
@@ -120,7 +118,7 @@ export default function ContactFAQs() {
                   </div>
                 </button>
                 
-                {/* Expandable Hidden Context Panel Area */}
+                 
                 <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
                   isOpen ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'
                 }`}>
@@ -134,7 +132,7 @@ export default function ContactFAQs() {
             );
           })}
 
-          {/* Extended View More Action Trigger Button */}
+          
           <div className="text-left pl-2 pt-1">
             <button 
               onClick={() => alert("Redirecting to the extended global developer repository knowledge hub...")}

@@ -1,25 +1,21 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import heroBg from '../assets/hero.png';
-
-// 1. IMPORT YOUR NEW IMAGE HERE
-// Make sure the file name exactly matches what is in your assets folder
+ 
 import bottomImage from '../assets/bottom-image.png'; 
 
 export default function Hero() {
   return (
     <section id="home" className="w-full bg-white pt-8 pb-12 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* --- MAIN HERO CONTENT --- */}
+         
         <div className="w-full relative min-h-[500px]">
           <img 
             src={heroBg} 
             alt="GDGC Community Illustration" 
             className="w-full h-auto max-h-[85vh] object-contain object-right"
           />
-
-          {/* --- EXACTLY POSITIONED TEXT OVERLAY --- */}
+ 
           <div className="absolute top-0 left-0 pt-8 sm:pt-12 md:pt-16 lg:pt-24 z-10 w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg">
             
             <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-extrabold uppercase leading-[1.05] mb-5 tracking-tight">
@@ -46,9 +42,7 @@ export default function Hero() {
             
           </div>
         </div>
-        
-        {/* --- NEW BOTTOM IMAGE SECTION --- */}
-        {/* mt-16 adds space above it, flex & justify-center centers it */}
+         
         <div className="mt-16 flex justify-center items-center w-full">
           <img 
             src={bottomImage} 

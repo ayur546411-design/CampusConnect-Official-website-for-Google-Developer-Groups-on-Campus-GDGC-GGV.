@@ -17,12 +17,9 @@ export default function LiveEvent() {
         <span className="w-2.5 h-2.5 rounded-full bg-[#ea4335] animate-ping"></span>
         Live / Upcoming Event
       </h3>
-
-      {/* --- MASTER CONTAINER COMPONENT (COLOR UPDATED) --- */}
-      {/* Changed bg-white to bg-[#f8fafd] and updated the border tint */}
+ 
       <div className="w-full bg-[#f8fafd] rounded-[2rem] border border-blue-100/80 shadow-sm overflow-hidden flex flex-col lg:flex-row items-stretch">
-        
-        {/* --- BANNER IMAGING --- */}
+         
         <div className="w-full lg:w-[55%] bg-gray-50 flex items-center justify-center p-4 min-h-[300px]">
           <img 
             src={liveEventImg} 
@@ -34,8 +31,7 @@ export default function LiveEvent() {
             }}
           />
         </div>
-
-        {/* --- CONTENT DETAILS --- */}
+ 
         <div className="flex-1 p-8 md:p-10 flex flex-col justify-between space-y-6 border-t lg:border-t-0 lg:border-l border-gray-100/70">
           <div className="space-y-3">
             <span className="text-sm font-bold text-[#34a853] tracking-wide uppercase">
@@ -50,8 +46,7 @@ export default function LiveEvent() {
               submission guidelines, and global mentorship opportunities.
             </p>
           </div>
-
-          {/* Meta Info Indicators */}
+ 
           <div className="grid grid-cols-2 gap-4 border-t border-b border-gray-200/50 py-4 my-2 text-sm text-[#3c4043]">
             <div className="flex items-center gap-2">
               <span className="text-lg">📅</span>
@@ -62,8 +57,7 @@ export default function LiveEvent() {
               <span>04:00 PM onwards</span>
             </div>
           </div>
-
-          {/* --- ACTION BUTTONS --- */}
+ 
           <div className="flex flex-col sm:flex-row gap-4 w-full">
             <button 
               onClick={handleLearnMore}

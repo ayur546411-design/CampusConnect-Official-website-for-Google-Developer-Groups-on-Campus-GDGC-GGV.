@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import EventsPage from './pages/EventsPage';
-import ContactPage from './pages/ContactPage'; // Import the unified contact page file
+import ContactPage from './pages/ContactPage'; 
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -16,7 +16,7 @@ function App() {
       case 'events':
         return <EventsPage />;
       case 'gallery':
-        return <ContactPage />; // Mount contact layouts directly on clicking gallery link option selection
+        return <ContactPage />;
       case 'home':
       default:
         return <Home />;

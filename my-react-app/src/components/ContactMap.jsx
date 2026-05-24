@@ -63,11 +63,9 @@ export default function ContactMap() {
 
   return (
     <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch font-sans tracking-wide">
-      
-      {/* ================= LEFT SECTION: GET IN TOUCH (MAP CONTAINER) ================= */}
+       
       <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-sm p-6 md:p-8 flex flex-col justify-between space-y-4 text-left group hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-        
-        {/* Decorative Top Border Stripe */}
+         
         <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#4285f4] to-[#34a853]"></div>
 
         <div className="space-y-1.5 pt-2">
@@ -85,12 +83,11 @@ export default function ContactMap() {
             <span className="text-[10px]">↗</span>
           </button>
         </div>
-
-        {/* --- FIXED COMPACT EMBED MAP STRIPE --- */}
+ 
         <div className="w-full h-[280px] md:h-[320px] rounded-2xl overflow-hidden border border-gray-100 shadow-inner bg-gray-50/50 relative p-1 mt-2">
           <iframe 
             title="GGV Campus Hub Location Pin"
-            /* Using clean secure URL search criteria format to completely clear the broken pb validation error */
+            
             src="https://maps.google.com/maps?q=Guru%20Ghasidas%20Vishwavidyalaya%20Bilaspur&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full rounded-xl border-0 relative z-10"
             allowFullScreen="" 
@@ -99,11 +96,9 @@ export default function ContactMap() {
           ></iframe>
         </div>
       </div>
-
-      {/* ================= RIGHT SECTION: SOCIAL CONNECT (COMMUNITY CONTAINER) ================= */}
+ 
       <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-sm p-6 md:p-8 flex flex-col justify-between space-y-4 text-left group hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-        
-        {/* Decorative Top Border Stripe */}
+         
         <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#fbbc05] to-[#ea4335]"></div>
 
         <div className="space-y-2 pt-2 z-10">
@@ -114,8 +109,7 @@ export default function ContactMap() {
             Follow us on our social media platforms and stay fully connected with everything going on across the community.
           </p>
         </div>
-
-        {/* Brand SVG Social Track Hub Matrix */}
+ 
         <div className="flex flex-wrap gap-2.5 z-10">
           {socialLinks.map((social, index) => (
             <a
@@ -129,19 +123,17 @@ export default function ContactMap() {
               {social.svg}
             </a>
           ))}
-          
-          {/* Custom Terminal Coding Tag Badge */}
+           
           <div className="w-10 h-10 rounded-xl bg-blue-50/60 text-[#4285f4] border border-blue-100/30 flex items-center justify-center font-mono font-black text-xs select-none">
             &lt;/&gt;
           </div>
         </div>
-
-        {/* ================= FIXED EDGE-TO-EDGE OVERFLOW FITTING CONTAINER ================= */}
+ 
         <div className="w-full h-[180px] md:h-[220px] bg-gray-50/40 border border-gray-100 rounded-2xl flex items-center justify-center overflow-hidden z-10 relative mt-2">
           <img 
             src={socialConnectImg} 
             alt="Community team collaboration illustration graphic" 
-            /* Swapped object-contain to object-cover to fit the entire banner width edge-to-edge cleanly */
+            
             className="w-full h-full object-cover filter brightness-[0.98] contrast-[1.03] transition-transform duration-700 group-hover:scale-103"
             onError={(e) => {
               e.target.style.display = 'none';
@@ -150,7 +142,7 @@ export default function ContactMap() {
           />
         </div>
 
-        {/* Soft Background Accent Glow Orb */}
+        
         <div className="absolute -right-20 -bottom-20 w-48 h-48 bg-blue-50/30 rounded-full blur-3xl pointer-events-none"></div>
       </div>
 

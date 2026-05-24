@@ -1,29 +1,26 @@
 import React from 'react';
 import about1 from '../assets/about1.png';
-import about2 from '../assets/about2.jpg'; // <-- Importing your second image asset
+import about2 from '../assets/about2.jpg';
 
 export default function AboutHeader() {
   return (
     <div className="w-full flex flex-col space-y-12 font-sans tracking-wide m-0 p-0">
       
-      {/* --- TOP ROW: SPLIT TEXT & IMAGE 1 --- */}
+      
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        {/* LEFT SIDE: TEXT CONTENT WITH INCREASED FONT SIZES */}
+        
         <div className="lg:col-span-7 space-y-5 text-left">
-          {/* PDF Block: WHAT WE DO */}
-          <span className="text-sm font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1.5 rounded-md inline-block">
+           <span className="text-sm font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1.5 rounded-md inline-block">
             WHAT WE DO
           </span>
           
-          {/* PDF Block: About GDGC GGV (Increased text size) */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#202124] tracking-tight leading-tight">
             About GDGC GGV
           </h2>
           
           <div className="w-20 h-1.5 bg-[#ea4335] rounded-full mb-6"></div>
           
-          {/* PDF Block: Description Strings (Increased from text-base to text-lg/xl) */}
           <div className="space-y-5 text-lg md:text-xl text-[#5f6368] leading-relaxed font-normal max-w-2xl">
             <p>
               Google Developer Groups on Campus (GDGC) Guru Ghasidas Vishwavidyalaya is 
@@ -37,7 +34,6 @@ export default function AboutHeader() {
           </div>
         </div>
 
-        {/* RIGHT SIDE: IMAGE 1 (about1.png) */}
         <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
           <div className="w-full max-w-md lg:max-w-full rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 bg-gray-50 p-2">
             <img 
@@ -54,7 +50,6 @@ export default function AboutHeader() {
 
       </div>
 
-      {/* --- BOTTOM ROW: IMAGE 2 (about2.jpg) PLACED AT THE END OF HEADER --- */}
       <div className="w-full rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 bg-gray-50 p-2 mt-4">
         <img 
           src={about2} 

@@ -1,7 +1,7 @@
 import React from 'react';
-import EventsHeader from '../components/EventsHeader'; // Fixed path: removed '/event'
-import LiveEvent from '../components/LiveEvent';       // Fixed path: removed '/event'
-import PastEvents from '../components/PastEvents';     // Fixed path: removed '/event'
+import EventsHeader from '../components/EventsHeader'; 
+import LiveEvent from '../components/LiveEvent';       
+import PastEvents from '../components/PastEvents';    
 
 export default function EventsPage() {
   return (
