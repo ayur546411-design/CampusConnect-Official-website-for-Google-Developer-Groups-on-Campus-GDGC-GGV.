@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo1.jpg';
+import logo from '../assets/logo.png'; 
 
 export default function Navbar({ onNavigate, currentPage }) {
   // State to manage the mobile navigation drawer visibility
@@ -65,8 +65,17 @@ export default function Navbar({ onNavigate, currentPage }) {
             Events
           </button>
           
-          {/* RETAINED ANCHOR SECTIONS FOR THE LANDING PAGE */}
-          <a href="#gallery" className="hover:text-blue-600 transition-colors">Gallery</a>
+          {/* CONTACT US INTERACTIVE BUTTON */}
+          <button 
+            onClick={() => onNavigate('gallery')} 
+            className={`transition-colors font-medium bg-transparent border-none cursor-pointer ${
+              currentPage === 'gallery' ? 'text-blue-600 font-semibold' : 'hover:text-blue-600'
+            }`}
+          >
+            Contact Us
+          </button>
+          
+          {/* ANCHOR LANDING SECTIONS */}
           <a href="#team" className="hover:text-blue-600 transition-colors">Team</a>
           
           {/* --- CALL TO ACTION BUTTON --- */}
@@ -122,8 +131,13 @@ export default function Navbar({ onNavigate, currentPage }) {
           >
             Events
           </button>
+          <button 
+            onClick={() => { onNavigate('gallery'); setIsOpen(false); }} 
+            className={`w-full text-left py-1 bg-transparent border-none ${currentPage === 'gallery' ? 'text-blue-600 font-bold' : 'hover:text-blue-600'}`}
+          >
+            Contact Us
+          </button>
           
-          <a href="#gallery" onClick={() => setIsOpen(false)} className="w-full text-left py-1 hover:text-blue-600 transition-colors">Gallery</a>
           <a href="#team" onClick={() => setIsOpen(false)} className="w-full text-left py-1 hover:text-blue-600 transition-colors">Team</a>
           
           <button 
