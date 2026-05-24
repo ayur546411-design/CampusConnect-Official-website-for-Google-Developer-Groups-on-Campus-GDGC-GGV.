@@ -3,18 +3,30 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
+import EventsPage from './pages/EventsPage'; // <-- 1. Import your new modular Events page
 
 function App() {
-  // State tracking which section or sub-page is currently active
   const [currentPage, setCurrentPage] = useState('home');
+
+  // Page layout rendering router logic
+  const renderPage = () => {
+    switch(currentPage) {
+      case 'about':
+        return <AboutPage />;
+      case 'events':
+        return <EventsPage />; 
+      case 'home':
+      default:
+        return <Home />;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col justify-between">
-      {/* Pass navigate state setter function to update views from header actions */}
       <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
       
       <main className="flex-grow">
-        {currentPage === 'home' ? <Home /> : <AboutPage />}
+        {renderPage()}
       </main>
 
       <Footer />

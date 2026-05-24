@@ -43,7 +43,7 @@ export default function AboutHeader() {
             <img 
               src={about1} 
               alt="About GDGC GGV layout" 
-              className="w-full h-auto object-cover rounded-[2rem] max-h-[420px]"
+              className="w-full h-auto object-cover rounded-4xl max-h-105"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.insertAdjacentHTML('afterend', '<div class="w-full h-64 flex items-center justify-center bg-gray-100 font-bold text-gray-400">about1.png</div>');
@@ -59,7 +59,7 @@ export default function AboutHeader() {
         <img 
           src={about2} 
           alt="About GDGC GGV Showcase Banner" 
-          className="w-full h-auto object-contain max-h-125 rounded-[2rem]"
+          className="w-full h-auto object-contain max-h-125 rounded-4xl"
           onError={(e) => {
             e.target.style.display = 'none';
             e.target.insertAdjacentHTML('afterend', '<div class="w-full h-48 flex items-center justify-center bg-gray-100 font-bold text-gray-400">about2.jpg</div>');
