@@ -5,7 +5,24 @@ export default function Navbar({ onNavigate, currentPage }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleJoinUs = () => {
-    alert("Welcome to GDGC GGV! Redirecting to the community platform...");
+    handleNavigate('join');
+  };
+
+  const handleNavigate = (page, elementId) => {
+    onNavigate(page);
+    setIsOpen(false);
+    if (elementId) {
+      setTimeout(() => {
+        const el = document.getElementById(elementId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 180);
+    } else {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   return (
@@ -14,14 +31,14 @@ export default function Navbar({ onNavigate, currentPage }) {
 
         <div className="flex items-center space-x-3">
           <button
-            onClick={() => onNavigate('home')}
+            onClick={() => handleNavigate('home')}
             className="flex items-center gap-2 cursor-pointer focus:outline-none bg-transparent border-none"
             aria-label="Go to Home"
           >
             <img
               src={logo}
               alt="GDGC Logo"
-              className="h-14 w-44 object-contain rounded-sm"
+              className="h-11 w-36 sm:h-14 sm:w-44 object-contain rounded-sm"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.insertAdjacentHTML(
@@ -33,10 +50,10 @@ export default function Navbar({ onNavigate, currentPage }) {
           </button>
         </div>
 
-        <div className="hidden md:flex items-center space-x-8 font-medium text-gray-600">
+        <div className="hidden md:flex items-center space-x-7 font-medium text-gray-600">
 
           <button
-            onClick={() => onNavigate('home')}
+            onClick={() => handleNavigate('home')}
             className={`transition-colors font-medium bg-transparent border-none cursor-pointer ${
               currentPage === 'home'
                 ? 'text-blue-600 font-semibold'
@@ -47,7 +64,7 @@ export default function Navbar({ onNavigate, currentPage }) {
           </button>
 
           <button
-            onClick={() => onNavigate('about')}
+            onClick={() => handleNavigate('about')}
             className={`transition-colors font-medium bg-transparent border-none cursor-pointer ${
               currentPage === 'about'
                 ? 'text-blue-600 font-semibold'
@@ -58,37 +75,41 @@ export default function Navbar({ onNavigate, currentPage }) {
           </button>
 
           <button
-            onClick={() => onNavigate('events')}
+            onClick={() => handleNavigate('events')}
             className={`transition-colors font-medium bg-transparent border-none cursor-pointer ${
               currentPage === 'events'
                 ? 'text-blue-600 font-semibold'
                 : 'hover:text-blue-600'
             }`}
           >
-            Events
+            Upcoming Events
           </button>
 
           <button
-            onClick={() => onNavigate('gallery')}
+            onClick={() => handleNavigate('organizers')}
             className={`transition-colors font-medium bg-transparent border-none cursor-pointer ${
-              currentPage === 'gallery'
+              currentPage === 'organizers'
                 ? 'text-blue-600 font-semibold'
                 : 'hover:text-blue-600'
             }`}
           >
-            Contact Us
+            Organizers
           </button>
 
-          <a
-            href="#team"
-            className="hover:text-blue-600 transition-colors"
+          <button
+            onClick={() => handleNavigate('contact')}
+            className={`transition-colors font-medium bg-transparent border-none cursor-pointer ${
+              currentPage === 'contact'
+                ? 'text-blue-600 font-semibold'
+                : 'hover:text-blue-600'
+            }`}
           >
-            Team
-          </a>
+            Contact
+          </button>
 
           <button
             onClick={handleJoinUs}
-            className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all shadow-sm active:scale-95 cursor-pointer"
+            className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all shadow-sm active:scale-95 cursor-pointer ml-2"
           >
             Join Us
           </button>
@@ -138,17 +159,14 @@ export default function Navbar({ onNavigate, currentPage }) {
       <div
         className={`md:hidden bg-white border-b border-gray-100 overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen
-            ? 'max-h-80 opacity-100 visible'
+            ? 'max-h-[380px] opacity-100 visible'
             : 'max-h-0 opacity-0 invisible'
         }`}
       >
         <div className="px-4 pt-2 pb-6 space-y-3 font-medium text-gray-600 flex flex-col items-start">
 
           <button
-            onClick={() => {
-              onNavigate('home');
-              setIsOpen(false);
-            }}
+            onClick={() => handleNavigate('home')}
             className={`w-full text-left py-1 bg-transparent border-none ${
               currentPage === 'home'
                 ? 'text-blue-600 font-bold'
@@ -159,10 +177,7 @@ export default function Navbar({ onNavigate, currentPage }) {
           </button>
 
           <button
-            onClick={() => {
-              onNavigate('about');
-              setIsOpen(false);
-            }}
+            onClick={() => handleNavigate('about')}
             className={`w-full text-left py-1 bg-transparent border-none ${
               currentPage === 'about'
                 ? 'text-blue-600 font-bold'
@@ -173,40 +188,37 @@ export default function Navbar({ onNavigate, currentPage }) {
           </button>
 
           <button
-            onClick={() => {
-              onNavigate('events');
-              setIsOpen(false);
-            }}
+            onClick={() => handleNavigate('events')}
             className={`w-full text-left py-1 bg-transparent border-none ${
               currentPage === 'events'
                 ? 'text-blue-600 font-bold'
                 : 'hover:text-blue-600'
             }`}
           >
-            Events
+            Upcoming Events
           </button>
 
           <button
-            onClick={() => {
-              onNavigate('gallery');
-              setIsOpen(false);
-            }}
+            onClick={() => handleNavigate('organizers')}
             className={`w-full text-left py-1 bg-transparent border-none ${
-              currentPage === 'gallery'
+              currentPage === 'organizers'
                 ? 'text-blue-600 font-bold'
                 : 'hover:text-blue-600'
             }`}
           >
-            Contact Us
+            Organizers
           </button>
 
-          <a
-            href="#team"
-            onClick={() => setIsOpen(false)}
-            className="w-full text-left py-1 hover:text-blue-600 transition-colors"
+          <button
+            onClick={() => handleNavigate('contact')}
+            className={`w-full text-left py-1 bg-transparent border-none ${
+              currentPage === 'contact'
+                ? 'text-blue-600 font-bold'
+                : 'hover:text-blue-600'
+            }`}
           >
-            Team
-          </a>
+            Contact
+          </button>
 
           <button
             onClick={() => {

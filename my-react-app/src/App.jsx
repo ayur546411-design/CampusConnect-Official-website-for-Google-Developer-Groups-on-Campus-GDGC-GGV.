@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import EventsPage from './pages/EventsPage';
 import ContactPage from './pages/ContactPage'; 
+import OrganizersPage from './pages/OrganizersPage';
+import JoinPage from './pages/JoinPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -16,10 +18,15 @@ function App() {
       case 'events':
         return <EventsPage />;
       case 'gallery':
+      case 'contact':
         return <ContactPage />;
+      case 'organizers':
+        return <OrganizersPage />;
+      case 'join':
+        return <JoinPage />;
       case 'home':
       default:
-        return <Home />;
+        return <Home onNavigate={setCurrentPage} />;
     }
   };
 
@@ -27,7 +34,7 @@ function App() {
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col justify-between">
       <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
       <main className="flex-grow">{renderPage()}</main>
-      <Footer />
+      <Footer onNavigate={setCurrentPage} />
     </div>
   );
 }

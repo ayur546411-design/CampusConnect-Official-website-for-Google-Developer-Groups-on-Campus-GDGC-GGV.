@@ -44,7 +44,7 @@ export default function PastEvents() {
   ];
 
   return (
-    <div className="w-full space-y-16 pt-6 font-sans tracking-wide text-left">
+    <div id="past-events" className="w-full space-y-16 pt-6 font-sans tracking-wide text-left">
       
       <div className="space-y-6">
         <h3 className="text-2xl font-bold text-[#202124]">

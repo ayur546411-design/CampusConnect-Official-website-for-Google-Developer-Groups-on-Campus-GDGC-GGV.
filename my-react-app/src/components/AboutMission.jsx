@@ -58,7 +58,7 @@ export default function AboutMission() {
       {steps.map((step, idx) => (
         <div
           key={idx}
-          className="w-full bg-white rounded-4xl border border-gray-100 shadow-sm overflow-hidden flex flex-col md:flex-row items-stretch min-h-65"
+          className="w-full bg-white rounded-3xl md:rounded-[2.5rem] border border-gray-100 shadow-sm overflow-hidden flex flex-col md:flex-row items-stretch min-h-65"
         >
           <div
             className={`hidden sm:flex w-24 items-center justify-center p-4 border-r border-gray-50 bg-gray-50/40 ${
@@ -71,7 +71,7 @@ export default function AboutMission() {
           </div>
 
           <div
-            className={`flex-1 p-8 md:p-10 flex flex-col justify-center space-y-2 ${
+            className={`flex-1 p-6 sm:p-8 md:p-10 flex flex-col justify-center space-y-2 ${
               step.isReversed ? 'md:order-2' : ''
             }`}
           >
@@ -98,7 +98,7 @@ export default function AboutMission() {
             <img
               src={step.illustration}
               alt={step.title}
-              className="w-full max-h-65 object-contain filter contrast-[1.25] saturate-[1.50] transition-transform duration-300 hover:scale-105"
+              className="w-full max-h-48 md:max-h-65 object-contain filter contrast-[1.25] saturate-[1.50] transition-transform duration-300 hover:scale-105"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.insertAdjacentHTML('afterend', '<div class="text-sm font-bold text-gray-300">Image Asset</div>');
