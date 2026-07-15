@@ -28,7 +28,7 @@ The **GDGC GGV Website** serves as the official digital platform for the Google 
 ## ℹ️ About
 
 <p align="center">
-  <img src="./src/assets/ABOUT.png" alt="About Page" width="100%">
+  <img src="./GDGC-GGV/src/assets/ABOUT.png" alt="About Page" width="100%">
 </p>
 
 ---
@@ -36,7 +36,7 @@ The **GDGC GGV Website** serves as the official digital platform for the Google 
 ## 📅 Events
 
 <p align="center">
-  <img src="./src/assets/EVENT.png" alt="Events Page" width="100%">
+  <img src="./GDGC-GGV/src/assets/EVENT.png" alt="Events Page" width="100%">
 </p>
 
 ---
@@ -44,7 +44,7 @@ The **GDGC GGV Website** serves as the official digital platform for the Google 
 ## 🤝 Join GDGC
 
 <p align="center">
-  <img src="./src/assets/Join.png" alt="Join GDGC" width="100%">
+  <img src="./GDGC-GGV/src/assets/Join.png" alt="Join GDGC" width="100%">
 </p>
 
 ---
@@ -52,7 +52,7 @@ The **GDGC GGV Website** serves as the official digital platform for the Google 
 ## 📞 Contact
 
 <p align="center">
-  <img src="./src/assets/CONTAC.png" alt="Contact Page" width="100%">
+  <img src="./GDGC-GGV/src/assets/CONTAC.png" alt="Contact Page" width="100%">
 </p>
 
 ## ✨ Features
