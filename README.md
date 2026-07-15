@@ -20,7 +20,7 @@ The **GDGC GGV Website** serves as the official digital platform for the Google 
 ## 🏠 Home
 
 <p align="center">
-  <img src="./src/assets/HOME.png" alt="Home Page" width="100%">
+  <img src="./GDGC-GGV/src/assets/HOME.png" alt="Home Page" width="100%">
 </p>
 
 ---
